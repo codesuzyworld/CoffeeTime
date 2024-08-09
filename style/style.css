@@ -1,0 +1,98 @@
+body{
+    background-color:#EEE4DB;
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+}
+
+a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  
+  a:hover {
+    color: rgb(255, 239, 207);
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
+
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+#recipeNav{
+    display:flex;
+    flex-direction: row;
+}
+
+.addRecipeBtn{
+    border-radius: 50px;
+    background: #6D5747;
+    color: white;
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#espressoRecipesBtn{
+    border-radius: 50px;
+    background: #332A2A;
+    color: white;
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.recipeList{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 35px 10px 35px;
+    gap: 20px;
+    border-radius: 20px;
+    background: #443939;
+    color: white;
+    flex-basis: 0;
+}
+
+.recipeTitle{
+    justify-items: flex-start;
+    flex-grow: 3;
+    
+}
+
+.listRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: flex-end;
+    gap:25px;
+    flex-grow: 0;
+}
+
+.brewNowBtn{
+    border-radius: 50px;
+    background: #6D5747;
+    color: white;
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
