@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Time</title>
+    <link rel="stylesheet" href="style/style.css"></head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script/index.js"></script>
+        
+        <body>
+            <header>
+                <div id="logo">COFFEE TIME</div>
+            </header>
+                
+         
+            <main id="recipeListBackGround">
+                <div id="recipeNav">
+                    <p id="espressoRecipesBtn">ESPRESSO MACHINE RECIPES</h2>
+                    <a href="views/addRecipe.html"><p class="addRecipeBtn">+ ADD RECIPE</h2> </a>
+                    <div id="clearbuttonsection"><button type="button" id="clearData">Clear Data</button></div>
+                    </div>
+
+                <div id="noneSection"> 
+                    <h3> There are no recipes. Add one now! </h3>
+                    <a href="views/addRecipe.html"><p class="addRecipeBtn">+ ADD RECIPE</h2> </a>
+                </div>
+                <div id="recipeSection"> 
+                    <div class="recipeList">
+                        <h2 id="recipeTitle">Ethiopian Yirgacheffee</h2>
+                        <div class="listRight">
+                            <div class="recipeInfo">
+                                <p id="waterML">0 ML</p>
+                                <p id="pourTime">0 Seconds</p>                
+                            </div>
+                            <a href="views/espressobrew.html"><p class="brewNowBtn">Brew Now</h2></a>
+                        </div>
+                    </div>
+                </div>   
+                  
+            </main>
+                
+        </body>
+        </html>

@@ -28,7 +28,7 @@ function onLoadFn() {
         recipeSection.innerHTML = '';
 
         // For loop that will display all the recipes stored in the recipe array 
-        recipes.forEach((recipe, index) => {
+        recipes.forEach((recipe) => {
             let recipeElem = document.createElement("div");
             recipeElem.className = "recipeList";
             recipeElem.innerHTML = `

@@ -45,7 +45,7 @@ function onLoadFn() {
         localStorage.setItem("espressoRecipeList", JSON.stringify(recipeList));
 
         console.log ("New Recipe Added");
-        window.location.href = "../views/index.html";
+        window.location.href = "../index.html";
         event.preventDefault();
     }
     

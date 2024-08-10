@@ -81,7 +81,7 @@ header{
 }
 
 
-.recipeList{
+.recipeList {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -91,26 +91,27 @@ header{
     background: #443939;
     color: white;
     flex-basis: 0;
-
+    justify-content: space-between;
+    max-width: 800px;
 }
+
 #recipeSection{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.recipeTitle{
-    justify-items: flex-start;
-    flex-grow: 3;
-    
+
+.recipeTitle {
+    flex-grow: 1; 
+    text-align: left;
 }
 
 .listRight{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-items: flex-end;
-    gap:25px;
-    flex-grow: 0;
+    gap: 25px;
+    justify-content: flex-end;
 }
 
 .brewNowBtn{
