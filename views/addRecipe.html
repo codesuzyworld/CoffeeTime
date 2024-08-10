@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Time</title>
-</head>
-<body>
-    <header>
-        <div id="logo">COFFEE TIME</div>
-        <div id="nav">
-            <p id="espressoRecipesBtn">ESPRESSO MACHINE RECIPES</h2>
-            <p id="addRecipeBtn">+ ADD RECIPE</h2>
-        </div>
-    </header>
+    <link rel="stylesheet" href="../style/style.css"></head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../script/recipe.js"></script>
 
-    <main>
-        <div id="noneSection"> 
-            <h3> There are no recipes. Add one now! </h3>
-            <p id="addRecipeBtn">+ ADD RECIPE</h2>
-        </div>
-        <div id="recipeList">
-            <h2 id="recipeTitle"></h2>
-            <div id="recipeInfo">
-                <p id="waterML"></p>
-                <p id="pourTime"></p>                
-            </div>
-            <p id="brewNowBtn">Brew Now</h2>
-        </div>        
-    </main>
+        
+        <body>
+            <header>
+                <div id="logo">COFFEE TIME</div>
+        
+            <main>
+                <div id="formBackground"> 
+                    <div id="recipeNav">
+                    <h2>Add Espresso Recipe</h2>
+                    <a href="index.html"><p class="addRecipeBtn">BACK</h2> </a>
+                    </div>
+                    <form id="addEspressoRecipe" class="addRecipe">
 
+                        <label for="coffeeBean">Coffee Bean</label>
+                        <input type="text" id="coffeeBean" name="coffeeBean" required>
 
-</body>
-</html>
+                        <label for="beanGrams">Bean weight (grams)</label>
+                        <input type="text" id="beanGrams" name="beanGrams" required>
+
+                        <label for="yieldML">Expected Yield (ML)</label>
+                        <input type="number" id="yieldML" name="yieldML" min="0" step="0.1" required>
+                      
+                        <label for="brewingTime">Brewing Time (seconds) </label>
+                        <input type="text" id="brewingTime" name="brewingTime" required>
+
+                        <label for="temperature">Temperature (&#8451;) </label>
+                        <input type="text" id="temperature" name="temperature" required>
+
+                        <input type="submit" id="submit" name="submit">
+                    </form>
+                </div>
+            </main>
+        
+        
+        </body>
