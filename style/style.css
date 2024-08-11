@@ -118,6 +118,7 @@ header{
     align-items: center;
     gap: 10px;
     transition:0.5s;
+    border:none;
 }
 
 .addRecipeBtn:hover{
