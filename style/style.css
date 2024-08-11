@@ -2,7 +2,8 @@ body{
     padding:50px;
     background-color:#EEE4DB;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding:30px;
     font-family: "Libre Baskerville", Helvetica, sans-serif;
 }
@@ -32,11 +33,24 @@ a:link {
 
 header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap:20px;
+    justify-content: space-between;
 }
 
 
 /*Index*/
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+header{
+    justify-content: space-between;
+    align-items: center;
+}
 
 #recipeListBackGround{
     display: flex;
@@ -44,14 +58,56 @@ header{
     flex-direction: column;
     justify-content: left;
     align-items: left;
+    max-width: 800px;
 }
 
 #recipeNav{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     gap:20px;
 }
+.navlist{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    list-style-type: none;
 
+    color: #736c64;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.navlist li a {
+    color: #4E453A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition:0.5s;
+}
+
+.navlist li a:hover {
+    color: #8c7b66;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition:0.5s;
+}
+
+#noneSection{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    border-radius: 35px;
+    background: #CCC2BA;
+    padding: 50px;
+}
 .addRecipeBtn {
     border-radius: 50px;
     background: #6D5747;
@@ -61,16 +117,37 @@ header{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition:0.5s;
 }
 
 .addRecipeBtn:hover{
     background: #221b16;
     transition: 0.3s;
     color: rgb(255, 255, 255);
+    transition:0.5s;
+}
+
+#clearData{
+    border-radius: 50px;
+    border:none;
+    background: #804551;
+    color: white;
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition:0.5s;
+}
+
+
+#clearData:hover{
+    background: #af5f6f;
+    transition:0.5s;
 }
 
 #espressoRecipesBtn{
-    border-radius: 50px;
+    border-radius: 12px;
     background: #332A2A;
     color: white;
     display: inline-flex;
@@ -123,12 +200,15 @@ header{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition:0.5s;
 }
 
 .brewNowBtn:hover{
     background: #5e463e;
     transition: 0.3s;
     color: rgb(255, 255, 255);
+    transition:0.5s;
+    padding: 10px 30px;
 }
 
 
@@ -196,7 +276,7 @@ header{
 
 #pourTime{
     border-radius: 50px;
-    background: #6D5747;
+    background: #677266;
     padding: 10px 30px;
     gap: 10px;
     color:white;
@@ -211,6 +291,10 @@ header{
 }
 
 #timeDisplay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     border-radius: 30px;
     border: 10px solid #6D5747;
     background: #EEE6E0;
@@ -218,3 +302,73 @@ header{
     padding:50px;
 }
 
+.timerText{
+    color: #443939;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#timerBtnNav{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#startTimer{
+    border-radius: 50px;
+    border:none;
+    background: #677266;
+    color:white;
+    padding: 10px 50px;
+    transition: 0.5s;
+}
+
+#startTimer:hover{
+    border-radius: 50px;
+    border:none;
+    background: #44674c;
+    color:white;
+    padding: 10px 60px;
+    transition: 0.5s;
+}
+
+#pauseTimer{
+    border-radius: 50px;
+    border:none;
+    background: #797776;
+    color:white;
+    padding: 10px 50px;
+    transition: 0.5s;
+}
+
+#pauseTimer:hover{
+    border-radius: 50px;
+    border:none;
+    background: #696461;
+    color:white;
+    padding: 10px 60px;
+    transition: 0.5s;
+}
+
+
+#brewAgain{
+    border-radius: 50px;
+    border:none;
+    background: #815641;
+    color:white;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+#brewAgain:hover{
+    border-radius: 50px;
+    border:none;
+    background: #8e6550;
+    color:white;
+    padding: 10px 50px;
+    transition: 0.5s;
+}

@@ -35,7 +35,6 @@ function onLoadFn() {
 
 
      //Hide the brew again button first! 
-     $("#brewAgain").hide();
      $("#brewFinished").hide();
 
      //Load the info for the recipe
@@ -121,7 +120,7 @@ function onLoadFn() {
         $("#secsOut").show();
         $("#miliSecsOut").show();
         $("#brewFinished").hide();
-        $("#brewAgain").hide();      
+   
     }
 
     startBtn.onclick = startTimer;

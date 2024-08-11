@@ -13,9 +13,18 @@
 
         
         <body>
+            <div id="container">
             <header>
                 <div id="logo">COFFEE TIME</div>
-                
+                <div id="headernav">
+                    <ul class="navlist">
+                        <li><a href="../index.html">Home</a></li>
+                        <li>Ratio Convertor</li>
+                    </ul>
+                </div>
+            </header>
+
+            <main>   
                 <div id="brewBackground">
                     <div id="recipeNav">
                         <h2 id="recipeTitle">Ethiopian Yirgacheffee</h2>
@@ -30,9 +39,9 @@
                         <p id="temperature">Adjust your espresso machine temperature to 93C</p>        
                     </div>
                     <div id="timeDisplay">
-                        <span id="secsOut">00:</span>
-                        <span id="miliSecsOut">00</span>
-                        <span id="brewFinished">Brew Finished! Enjoy your cup of Joe.</span>
+                        <span id="secsOut" class="timerText">00:</span>
+                        <span id="miliSecsOut" class="timerText">00</span>
+                        <span id="brewFinished" class="finishedText">Brew Finished! Enjoy your cup of Joe.</span>
                     </div>
 
                     <div id="timerBtnNav">
@@ -40,9 +49,9 @@
                         <button type="button" id="pauseTimer">PAUSE</button>
                         <button type="button" id="brewAgain">BREW AGAIN</button>
                     </div>
-            <main>
+
               
             </main>
         
-        
+            </div> 
         </body>
