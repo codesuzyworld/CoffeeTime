@@ -37,7 +37,7 @@ function onLoadFn() {
                     <div class="listRight">
                         <p>${recipe.yieldML} ML</p>
                         <p>${recipe.brewingTime} Seconds</p>
-                        <a href="views/espressobrew.html?recipeId=${index}" class="brewNowBtn">Brew Now</a>
+                        <a href="../views/espressobrew.html?recipeId=${index}" class="brewNowBtn">Brew Now</a>
                     </div>
             `;
 

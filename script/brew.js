@@ -16,7 +16,7 @@ function onLoadFn() {
     console.log("Recipe ID" + recipeId + recipe.coffeeBean + "is loaded");
 
      //Recipe Info Element 
-     let recipeTitle = document.getElementById("recipeTitle");
+     let recipeTitle = document.getElementById("recipeBrewTitle");
      let waterML = document.getElementById("waterML");
      let pourTime = document.getElementById("pourTime");
 

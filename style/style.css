@@ -315,7 +315,7 @@ header{
     display: flex;
     flex-direction: row;
     gap:20px;
-    justify-content:space-between;
+    justify-content:left;
 }
 
 #waterML{
@@ -389,6 +389,9 @@ header{
     color:white;
     padding: 10px 50px;
     transition: 0.5s;
+    font-family: "Jost";
+    font-size:18px;
+    font-weight: 400;
 }
 
 #startTimer:hover{
@@ -407,6 +410,9 @@ header{
     color:white;
     padding: 10px 50px;
     transition: 0.5s;
+    font-family: "Jost";
+    font-size:18px;
+    font-weight: 400;
 }
 
 #pauseTimer:hover{
@@ -426,6 +432,9 @@ header{
     color:white;
     padding: 10px 30px;
     transition: 0.5s;
+    font-family: "Jost";
+    font-size:18px;
+    font-weight: 400;
 }
 #brewAgain:hover{
     border-radius: 50px;
@@ -444,7 +453,7 @@ header{
     font-weight: 500;
 }
 
-.recipeBrewTitle {
+#recipeBrewTitle {
     text-align: left;
     font-family: "Jost";
     font-style: normal;
