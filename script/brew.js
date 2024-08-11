@@ -32,8 +32,8 @@ function onLoadFn() {
      let startBtn = document.getElementById("startTimer");
      let pauseBtn = document.getElementById("pauseTimer");
      let brewAgainBtn = document.getElementById("brewAgain");
-
-
+     let deleteBtn = document.getElementById("deleteRecipe");
+   
      //Hide the brew again button first! 
      $("#brewFinished").hide();
 
@@ -124,7 +124,24 @@ function onLoadFn() {
    
     }
 
+    function deleteRecipe() {
+        // Delete the current recipe by id, one item
+        recipes.splice(recipeId, 1);
+        //Update the json 
+        localStorage.setItem("espressoRecipeList", JSON.stringify(recipes));
+        
+        //If there is no recipe left in the array, then clear data.
+        // Or else it will not show the message with the "No recipe add recipe " in the index.html
+        if (recipes.length === 0) {
+            localStorage.removeItem("espressoRecipeList");
+        }
+ 
+        //Redirect user back to the index page 
+        window.location.href = "../index.html";
+        console.log("Recipe Deleted");
+    }
     startBtn.onclick = startTimer;
 	pauseBtn.onclick = stopTimer;
     brewAgainBtn.onclick = restartTimer;
+    deleteBtn.onclick = deleteRecipe;
 }

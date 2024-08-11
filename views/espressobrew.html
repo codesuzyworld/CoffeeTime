@@ -19,7 +19,7 @@
                 <div id="headernav">
                     <ul class="navlist">
                         <li><a href="../index.html">Home</a></li>
-                        <li>Ratio Convertor</li>
+                        <!-- <li>Ratio Convertor</li> -->
                     </ul>
                 </div>
             </header>
@@ -28,16 +28,21 @@
                 <div id="brewBackground">
                     <div id="recipeNav">
                         <h2 id="recipeBrewTitle">Ethiopian Yirgacheffee</h2>
-                        <a href="../index.html"><p class="addRecipeBtn">BACK</p> </a>
+                        <div id="navButtons">
+                            <a href="../index.html"><p class="addRecipeBtn">BACK</p> </a>  
+                        </div>
+
                     </div>
                     <div id="brewInfo">
                         <p id="waterML">YIELD: 0 ML</p>
-                        <p id="pourTime">TOTAL BREW TIME: 0 Seconds</p>        
+                        <p id="pourTime">TOTAL BREW TIME: 0 Seconds</p>     
+    
                     </div>
                     <div id="preparation">
                         <p class="prepTitle">Preperation:</p>
                         <p id="beansGram">14 grams of beans, fine grind</p>
-                        <p id="temperature">Adjust your espresso machine temperature to 93&#8451;</p>        
+                        <p id="temperature">Adjust your espresso machine temperature to 93&#8451;</p>
+                        <button type="button" id="deleteRecipe">Delete Recipe</button>    
                     </div>
                     <div id="timeDisplay">
                         <span id="secsOut" class="timerText">00:</span>
@@ -50,6 +55,8 @@
                         <button type="button" id="pauseTimer">PAUSE</button>
                         <button type="button" id="brewAgain">BREW AGAIN</button>
                     </div>
+    
+
 
               
             </main>

@@ -285,7 +285,38 @@ header{
     font-weight: 600;
     margin:0;
 }
+#navButtons{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    margin:0;
+}
 
+#deleteRecipe{
+    box-sizing: border-box;
+    border-radius: 50px;
+    border:none;
+    background: #804551;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+    border:none;
+    font-family: "Jost";
+    font-size: 18px;
+    margin:0;
+    align-self: flex-end;
+}
+
+#deleteRecipe:hover{
+    background: #b74747;
+    transition: 0.3s;
+    color: rgb(255, 255, 255);
+    transition:0.5s;
+}
 
 /*Brew page*/
 
@@ -353,9 +384,11 @@ header{
     border-radius: 30px;
     background: #443939;
     width:500px;
-    padding:10px 50px 10px 50px;
+    padding:10px 50px 30px 50px;
     color: white;
 }
+
+
 
 #timeDisplay{
     display: flex;
