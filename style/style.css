@@ -160,3 +160,61 @@ header{
     border-radius: 35px;
     box-sizing: border-box; 
 }
+
+/*Brew page*/
+
+
+#brewBackground{
+    border-radius: 35px;
+    background: #CCC2BA;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    gap:20px;
+    max-width: 800px;
+}
+
+#recipeNav{
+    justify-content:space-between;
+}
+#brewInfo{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content:space-between;
+}
+
+#waterML{
+    border-radius: 50px;
+    background: #6D5747;
+    padding: 10px 30px;
+    gap: 10px;
+    color:white;
+}
+
+#pourTime{
+    border-radius: 50px;
+    background: #6D5747;
+    padding: 10px 30px;
+    gap: 10px;
+    color:white;
+}
+
+#preparation{
+    border-radius: 30px;
+    background: #443939;
+    width:500px;
+    padding:10px 50px 10px 50px;
+    color: white;
+}
+
+#timeDisplay{
+    border-radius: 30px;
+    border: 10px solid #6D5747;
+    background: #EEE6E0;
+    width:500px;
+    padding:50px;
+}
+

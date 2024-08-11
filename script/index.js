@@ -28,15 +28,16 @@ function onLoadFn() {
         recipeSection.innerHTML = '';
 
         // For loop that will display all the recipes stored in the recipe array 
-        recipes.forEach((recipe) => {
+        recipes.forEach((recipe, index) => {
             let recipeElem = document.createElement("div");
             recipeElem.className = "recipeList";
+            //Here we add each recipe, and assign recipeID according to the array of the recipe JSON to the button. 
             recipeElem.innerHTML = `
                 <h2>${recipe.coffeeBean}</h2> 
                     <div class="listRight">
                         <p>${recipe.yieldML} ML</p>
                         <p>${recipe.brewingTime} Seconds</p>
-                        <a href="addRecipe.html"><p class="brewNowBtn">Brew Now</p></a>
+                        <a href="views/espressobrew.html?recipeId=${index}"><p id=brewNowBtn>Brew Now</p></a>
                     </div>
             `;
 
@@ -56,11 +57,3 @@ function onLoadFn() {
 
     clearDataBtn.onclick = clearData;
 }  
-        // let recipeTitle = espressoRecipe.coffeeBean;
-        // let waterML = espressoRecipe.yieldML;
-        // let pourTime = espressoRecipe.brewingTime;
-        
-        // recipeTitleElem.innerHTML = recipeTitle; 
-        // waterMLElem.innerHTML = waterML + "ML"; 
-        // pourTimeElem.innerHTML = pourTime + "Seconds"; 
-        // console.log("I am loading recipe in function");
