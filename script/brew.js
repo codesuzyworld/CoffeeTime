@@ -42,8 +42,8 @@ function onLoadFn() {
      waterML.innerHTML = `YIELD: ${recipe.yieldML} ML`;
      pourTime.innerHTML = `TOTAL BREW TIME: ${recipe.brewingTime} Seconds`;
 
-     beansGram.innerHTML = `${recipe.beanGrams} grams of bean, fine grind`;
-     temperature.innerHTML = `Adjust your espresso machine temperature to ${recipe.temperature} C`;
+     beansGram.innerHTML = `- ${recipe.beanGrams} grams of coffee beans, fine grind`;
+     temperature.innerHTML = `- Adjust your espresso machine temperature to ${recipe.temperature}&#8451;`;
 
 
 
@@ -52,8 +52,8 @@ function onLoadFn() {
      let brewMiliseconds = recipe.brewingTime * 1000;
 
      //Set the Timer display to the designated brew time
-     secsOut.innerHTML = Math.floor(brewMiliseconds / 1000) + " : ";
-     miliSecsOut.innerHTML = "000";
+     secsOut.innerHTML = Math.floor(brewMiliseconds / 1000) + ":";
+     miliSecsOut.innerHTML = "00";
      
      // Declare the remaining timer variables
      // Remaining time will be equal to brew miliseconds by default
@@ -65,8 +65,8 @@ function onLoadFn() {
         //Stop the Timer if time is up. 
         if (remainingTime <= 0){
             window.clearInterval(interval);
-            secsOut.innerHTML = "00 : ";
-            miliSecsOut.innerHTML = "000";
+            secsOut.innerHTML = "00:";
+            miliSecsOut.innerHTML = "00";
             $("#startTimer").hide();
             $("#pauseTimer").hide();
             $("#secsOut").hide();
@@ -77,29 +77,30 @@ function onLoadFn() {
         }
 
         // Everytime this function is run, deduct 100 miliseconds off the remainingTime
-        remainingTime -= 100;
+        remainingTime -= 10;
 
 		//Create time variables so all functions have access to it
         // The nowSeconds will be the remaining time divided by 1000
-        // The nowMiliseconds will be the remainder of remaining Time divided by 1000, which shows how much miliseconds left 
+        // The nowMiliseconds will be the remainder of remaining Time divided by 1000, which shows how much miliseconds left.
+        // Then it is divided by 10 so it only shows the two digit version 
         let nowSeconds = Math.floor(remainingTime / 1000);
-        let nowMiliseconds = remainingTime % 1000;
+        let nowMilliseconds = Math.floor((remainingTime % 1000) / 10);
 
         //Update the inner HTML
         // Seconds out will have one more 0 in front of it, and will have a : 
-        // Miliseconds out will have two more 0 in front of it. 
-        secsOut.innerHTML = nowSeconds.toString().padStart(2, '0') + " : ";
-        miliSecsOut.innerHTML = nowMiliseconds.toString().padStart(3, '0');
+        // Miliseconds out will have one more 0 in front of it. 
+        secsOut.innerHTML = nowSeconds.toString().padStart(2, '0') + ":";
+        miliSecsOut.innerHTML = nowMilliseconds.toString().padStart(2, '0');
 
      }
 
      function startTimer(){
         // Display the current time
 		timeDisplay();
-		// The interval will be 1000 miliseconds, and will run the timedisplay function 
-        secsOut.innerHTML = Math.floor(brewMiliseconds / 1000) + " : ";
-        miliSecsOut.innerHTML = "000";
-		interval = window.setInterval(timeDisplay, 100);
+		// The interval will be 10 miliseconds, and will run the timedisplay function 
+        secsOut.innerHTML = Math.floor(brewMiliseconds / 1000) + ":";
+        miliSecsOut.innerHTML = "00";
+		interval = window.setInterval(timeDisplay, 10);
      }
 
      function stopTimer() {		
@@ -113,8 +114,8 @@ function onLoadFn() {
         //reset the remainingtime as the brewMiliseconds
         remainingTime = brewMiliseconds;
         //Reset the display
-        secsOut.innerHTML = Math.floor(brewMiliseconds / 1000) + " : ";
-        miliSecsOut.innerHTML = "000";
+        secsOut.innerHTML = Math.floor(brewMiliseconds / 1000) + ":";
+        miliSecsOut.innerHTML = "00";
         $("#startTimer").show();
         $("#pauseTimer").show();
         $("#secsOut").show();

@@ -6,7 +6,7 @@
     <title>Coffee Time</title>
     <link rel="stylesheet" href="../style/style.css"></head>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oxygen+Mono&display=swap');
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../script/recipe.js"></script>
@@ -27,7 +27,7 @@
             <main>
                 <div id="formBackground"> 
                     <div id="recipeNav">
-                    <h2>Add Espresso Recipe</h2>
+                    <h2 class="addRecipeTitle">Add Espresso Recipe</h2>
                     <a href="../index.html"><p class="addRecipeBtn">BACK</p> </a>
                     </div>
                     <form id="addEspressoRecipe" class="addRecipe">
@@ -36,16 +36,16 @@
                         <input type="text" id="coffeeBean" name="coffeeBean" required>
 
                         <label for="beanGrams">Bean weight (grams)</label>
-                        <input type="number" id="beanGrams" name="beanGrams" required>
+                        <input type="text" inputmode="numeric" id="beanGrams" name="beanGrams" required>
 
                         <label for="yieldML">Expected Yield (ML)</label>
-                        <input type="number" id="yieldML" name="yieldML" min="0" step="0.1" required>
+                        <input type="text" inputmode="numeric" id="yieldML" name="yieldML" min="0" step="0.1" required>
                       
                         <label for="brewingTime">Brewing Time (seconds) </label>
-                        <input type="number" id="brewingTime" name="brewingTime" required>
+                        <input type="text" inputmode="numeric" id="brewingTime" name="brewingTime" required>
 
                         <label for="temperature">Temperature (&#8451;) </label>
-                        <input type="number" id="temperature" name="temperature" required>
+                        <input type="text" inputmode="numeric" id="temperature" name="temperature" required>
 
                         <input type="submit" id="submit" name="submit" class="addRecipeBtn">
                     </form>

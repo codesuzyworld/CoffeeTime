@@ -5,7 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     padding:30px;
-    font-family: "Libre Baskerville", Helvetica, sans-serif;
+    font-family: "Jost", Helvetica, sans-serif;
 }
 
 a:link {
@@ -38,6 +38,15 @@ header{
     justify-content: space-between;
 }
 
+#logo{
+    color: #4E453A;
+    font-family: Jost;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 10.5px;
+ }
 
 /*Index*/
 #container{
@@ -67,13 +76,15 @@ header{
     justify-content: space-between;
     align-items: center;
     gap:20px;
+    width: 500px;
 }
+
 .navlist{
     display:flex;
     flex-direction: row;
     gap:20px;
     list-style-type: none;
-
+    align-items: center;
     color: #736c64;
     font-size: 16px;
     font-style: normal;
@@ -112,13 +123,16 @@ header{
     border-radius: 50px;
     background: #6D5747;
     color: white;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     transition:0.5s;
     border:none;
+    font-family: "Jost";
+    font-size: 18px;
 }
 
 .addRecipeBtn:hover{
@@ -139,6 +153,7 @@ header{
     align-items: center;
     gap: 10px;
     transition:0.5s;
+    font-family: "Jost";
 }
 
 
@@ -156,6 +171,9 @@ header{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    font-family: "Jost";
+    font-size:18px;
+    font-weight: 400;
 }
 
 
@@ -170,18 +188,24 @@ header{
     color: white;
     flex-basis: 0;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 #recipeSection{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 1000px;
 }
 
 .recipeTitle {
-    flex-grow: 1; 
     text-align: left;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 600;
+    font-size:24px;
+    font-style: normal;
+    margin: 0;
 }
 
 .listRight{
@@ -202,6 +226,8 @@ header{
     align-items: center;
     gap: 10px;
     transition:0.5s;
+    font-family: "Jost";
+    font-size: 18px;
 }
 
 .brewNowBtn:hover{
@@ -209,7 +235,7 @@ header{
     transition: 0.3s;
     color: rgb(255, 255, 255);
     transition:0.5s;
-    padding: 10px 30px;
+    padding: 10px 20px;
 }
 
 
@@ -218,18 +244,21 @@ header{
 #formBackground{
     border-radius: 35px;
     background: #CCC2BA;
-    padding: 50px;
+    padding: 20px 50px 50px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: space-between;
+    gap:10px;
+    max-width: 800px;
 }
 
 .addRecipe{
     display: flex;
     flex-direction: column;
     align-items: left;
-    width: 300px;
+    gap:10px;
+    width: auto;
 }
 
 #addEspressoRecipe input[type="text"],
@@ -242,24 +271,46 @@ header{
     box-sizing: border-box; 
 }
 
+.addRecipeTitle{
+    color: #1a1414;
+    font-family: "Jost";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    margin:0;
+}
+
+
 /*Brew page*/
+
+#recipeNav,
+#brewInfo,
+#preparation,
+#timeDisplay,
+#timerBtnNav {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 
 #brewBackground{
     border-radius: 35px;
     background: #CCC2BA;
-    padding: 50px;
+    padding: 20px 50px 50px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: space-between;
-    gap:20px;
+    gap:10px;
     max-width: 800px;
 }
 
 #recipeNav{
     justify-content:space-between;
+    padding: 0;
 }
+
 #brewInfo{
     display: flex;
     flex-direction: row;
@@ -273,6 +324,11 @@ header{
     padding: 10px 30px;
     gap: 10px;
     color:white;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+    font-size:16px;
+    font-style: normal;
 }
 
 #pourTime{
@@ -281,6 +337,11 @@ header{
     padding: 10px 30px;
     gap: 10px;
     color:white;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+    font-size:16px;
+    font-style: normal;
 }
 
 #preparation{
@@ -310,6 +371,7 @@ header{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    font-family: "Oxygen Mono", monospace;
 }
 
 #timerBtnNav{
@@ -372,4 +434,21 @@ header{
     color:white;
     padding: 10px 50px;
     transition: 0.5s;
+}
+
+.prepTitle{
+    color: #FFF;
+    font-family: "Jost";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.recipeBrewTitle {
+    text-align: left;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 600;
+    font-size:30px;
+    font-style: normal;
 }
