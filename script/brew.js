@@ -13,7 +13,7 @@ function onLoadFn() {
 
     // Find the specific recipe using the recipeId
     let recipe = recipes[recipeId];
-    console.log("Recipe ID" + recipeId + recipe.coffeeBean + "is loaded");
+    console.log("Recipe ID " + recipeId + " " + recipe.coffeeBean + " is loaded");
 
      //Recipe Info Element 
      let recipeTitle = document.getElementById("recipeBrewTitle");
