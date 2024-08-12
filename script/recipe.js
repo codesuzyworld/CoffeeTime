@@ -14,10 +14,13 @@ function onLoadFn() {
     // Form Validation
     let regexMatch = /^\d{1,3}$/;
 
+    // Returns the boolean whether it matches the regex input
     function regExMatch(input){
         return regexMatch.test(input);
     }
     
+    // Input validation function for convience. 
+    // Takes in the element name, then determines whether or not the form is valid
     function inputValidation(element){
         if(!regExMatch(element.value)){
             element.style.background="red";
@@ -28,10 +31,10 @@ function onLoadFn() {
         }
     }
 
+    // The form is default true
     let isValidForm = true;
 
 
-    
     // After clicking submit
     function onSubmit(event){
 
@@ -42,6 +45,7 @@ function onLoadFn() {
         let brewingTime = brewingTimeElem.value;
         let temperature = temperatureElem.value;
         
+        // Input validation calling the function on each field 
         inputValidation(beanGramsElem);
         inputValidation(yieldMLElem);
         inputValidation(brewingTimeElem);
