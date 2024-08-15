@@ -40,14 +40,34 @@ header{
 }
 
 #logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap:0.5vw;
+}
+
+#logoText{
     color: #4E453A;
     font-family: Jost;
     font-size: 26px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-    letter-spacing: 10.5px;
+    letter-spacing: 3px;
  }
+
+#logo img{
+    min-width: 50px;
+    height:auto;
+}
+
+#logo img:hover{
+        animation-name: coffeeMove;
+        animation-duration: 0.2s;
+        animation-iteration-count: 2;
+}
+
 
 /*Index*/
 #container{
@@ -125,6 +145,20 @@ header{
     background: #CCC2BA;
     padding: 50px;
 }
+
+#noneSection img{
+    min-width:25%;
+    max-width:30%;
+    height: auto;
+}
+
+#noneSection img:hover{
+    animation-name: coffeeMove;
+    animation-duration: 0.2s;
+    animation-iteration-count: 2;
+}
+
+
 .addRecipeBtn {
     border-radius: 50px;
     background: #6D5747;
@@ -508,3 +542,20 @@ header{
     font-size:30px;
     font-style: normal;
 }
+
+/*Animation*/
+
+@keyframes coffeeMove {
+    0% {
+        transform: rotate(0deg)
+    }
+  
+    50% {
+        transform: rotate(-5deg)
+    }
+
+    100%{
+        transform: rotate(0deg)
+    }
+  }
+

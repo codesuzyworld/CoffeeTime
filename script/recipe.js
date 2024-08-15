@@ -55,6 +55,8 @@ function onLoadFn() {
         isValidForm = inputValidation(brewingTimeElem) && isValidForm;
         isValidForm = inputValidation(temperatureElem) && isValidForm;
 
+        console.log(beanGrindElem.value)
+
 
         console.log(beanGrind);
         console.log(isValidForm);
