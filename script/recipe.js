@@ -2,7 +2,6 @@ window.onload = onLoadFn;
 
 
 function onLoadFn() {
-
     //Form Element Declare
     let addRecipeForm = document.getElementById("addEspressoRecipe");
     let coffeeBeanElem = document.getElementById("coffeeBean");
@@ -27,19 +26,19 @@ function onLoadFn() {
         if(!regExMatch(element.value)){
             element.style.background="red";
             console.log ("Form is not valid");
-            isValidForm = false;
-        } else {
+            return false;
+        }else {
             element.style.background="";
+            return true;
         }
     }
-
-    // The form is default true
-    let isValidForm = true;
 
 
     // After clicking submit
     function onSubmit(event){
-
+        event.preventDefault(); 
+        let isValidForm = true;
+        
         // Capture form data!
         let coffeeBean = coffeeBeanElem.value;
         let beanGrams = beanGramsElem.value;
@@ -49,10 +48,16 @@ function onLoadFn() {
         let beanGrind = beanGrindElem.value;
         
         // Input validation calling the function on each field 
-        inputValidation(beanGramsElem);
-        inputValidation(yieldMLElem);
-        inputValidation(brewingTimeElem);
-        inputValidation(temperatureElem);
+
+
+        isValidForm = inputValidation(beanGramsElem) && isValidForm;
+        isValidForm = inputValidation(yieldMLElem) && isValidForm;
+        isValidForm = inputValidation(brewingTimeElem) && isValidForm;
+        isValidForm = inputValidation(temperatureElem) && isValidForm;
+
+
+        console.log(beanGrind);
+        console.log(isValidForm);
 
         if (isValidForm === true ){
             //Create object for espressoRecipe
@@ -83,7 +88,6 @@ function onLoadFn() {
             window.location.href = "../index.html";  
         }
 
-        event.preventDefault();
     }
     
     addRecipeForm.onsubmit = onSubmit;

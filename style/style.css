@@ -318,6 +318,15 @@ header{
     transition:0.5s;
 }
 
+#beanGrind{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 35px;
+    box-sizing: border-box; 
+}
+
 /*Brew page*/
 
 #recipeNav,
