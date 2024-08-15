@@ -23,6 +23,7 @@ function onLoadFn() {
      //Recipe Ingredient Prep Element
      let beansGram = document.getElementById("beansGram");
      let temperature = document.getElementById("temperature");
+     let beanGrind = document.getElementById("beanGrind");
 
      //Timer Display Element
      let secsOut = document.getElementById("secsOut");
@@ -41,8 +42,8 @@ function onLoadFn() {
      recipeTitle.innerHTML = recipe.coffeeBean;
      waterML.innerHTML = `YIELD: ${recipe.yieldML} ML`;
      pourTime.innerHTML = `TOTAL BREW TIME: ${recipe.brewingTime} Seconds`;
-
-     beansGram.innerHTML = `- ${recipe.beanGrams} grams of coffee beans, fine grind`;
+     beanGrind.innerHTML = `- Grind your coffee to a ${recipe.beanGrind} grind`;
+     beansGram.innerHTML = `- ${recipe.beanGrams} grams of coffee beans`;
      temperature.innerHTML = `- Adjust your espresso machine temperature to ${recipe.temperature}&#8451;`;
 
 
@@ -95,7 +96,7 @@ function onLoadFn() {
      }
 
      function startTimer(){
-        // Display the current time
+        
 		timeDisplay();
 		// The interval will be 10 miliseconds, and will run the timedisplay function 
         secsOut.innerHTML = Math.floor(brewMiliseconds / 1000) + ":";

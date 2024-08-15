@@ -10,6 +10,8 @@ function onLoadFn() {
     let yieldMLElem = document.getElementById("yieldML");
     let brewingTimeElem = document.getElementById("brewingTime");
     let temperatureElem = document.getElementById("temperature");
+    let beanGrindElem = document.getElementById("beanGrind");
+
 
     // Form Validation
     let regexMatch = /^\d{1,3}$/;
@@ -44,6 +46,7 @@ function onLoadFn() {
         let yieldML = yieldMLElem.value;
         let brewingTime = brewingTimeElem.value;
         let temperature = temperatureElem.value;
+        let beanGrind = beanGrindElem.value;
         
         // Input validation calling the function on each field 
         inputValidation(beanGramsElem);
@@ -56,6 +59,7 @@ function onLoadFn() {
             const espressoRecipe = {
                 coffeeBean: coffeeBean,
                 beanGrams: beanGrams,
+                beanGrind: beanGrind,
                 yieldML: yieldML,
                 brewingTime: brewingTime,
                 temperature: temperature
