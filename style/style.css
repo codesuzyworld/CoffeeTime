@@ -634,4 +634,12 @@ header{
     #brewAgain {
         padding: 10px 20px;
     }
+
+    #noneSection h3{
+        text-align: center;
+    }
+    #noneSection img{
+        max-width:50%;
+        height: auto;
+    }
   }
