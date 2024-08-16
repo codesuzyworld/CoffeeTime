@@ -14,17 +14,22 @@ function onLoadFn() {
 
     // Form Validation
     let regexMatch = /^\d{1,3}$/;
+    let regexCoffeeName = /^.{0,100}$/;
 
     // Returns the boolean whether it matches the regex input
     function regExMatch(input){
         return regexMatch.test(input);
     }
     
+    function regExCoffeeName(input){
+        return regexCoffeeName.test(input);
+    }
+    
     // Input validation function for convience. 
     // Takes in the element name, then determines whether or not the form is valid
     function inputValidation(element){
-        if(!regExMatch(element.value)){
-            element.style.background="red";
+        if(!regExMatch(element.value)||element.value === ""){
+            element.style.background="#bd5851";
             console.log ("Form is not valid");
             return false;
         }else {
@@ -36,7 +41,7 @@ function onLoadFn() {
 
     // After clicking submit
     function onSubmit(event){
-        event.preventDefault(); 
+
         let isValidForm = true;
         
         // Capture form data!
@@ -48,12 +53,31 @@ function onLoadFn() {
         let beanGrind = beanGrindElem.value;
         
         // Input validation calling the function on each field 
-
-
+        //This checks the numbers and makes sure it does not exceed 3 digits.
+        // Coffee brewing temperature, grams and yield will never exceed 3 digits.
         isValidForm = inputValidation(beanGramsElem) && isValidForm;
         isValidForm = inputValidation(yieldMLElem) && isValidForm;
         isValidForm = inputValidation(brewingTimeElem) && isValidForm;
         isValidForm = inputValidation(temperatureElem) && isValidForm;
+
+        // This checks whether or not the user have selected a grind level
+        if (beanGrind === "") {
+            beanGrindElem.style.background = "#bd5851";
+            isValidForm = false;
+            console.log("User have not chosen a grind yet");
+        } else {
+            beanGrindElem.style.background = "";
+        }
+
+        // This makes sure the user do not input too much into the title. Limits to 100 characters
+        if (coffeeBean === "" ||!regExCoffeeName(coffeeBeanElem.value)) {
+            coffeeBeanElem.style.background = "#bd5851";
+            isValidForm = false;
+            console.log("User have not specified a bean yet");
+        } else {
+            coffeeBeanElem.style.background = "";
+        }
+
 
         console.log(beanGrindElem.value)
 
@@ -89,7 +113,7 @@ function onLoadFn() {
             console.log ("New Recipe Added");
             window.location.href = "../index.html";  
         }
-
+        event.preventDefault(); 
     }
     
     addRecipeForm.onsubmit = onSubmit;

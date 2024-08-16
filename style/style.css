@@ -88,7 +88,6 @@ header{
     flex-direction: column;
     justify-content: left;
     align-items: left;
-
     min-width: auto;
 }
 
@@ -246,6 +245,7 @@ header{
     font-size:24px;
     font-style: normal;
     margin: 0;
+    max-width: 350px;
 }
 
 .listRight{
@@ -559,3 +559,79 @@ header{
     }
   }
 
+  /*Mobile reponsive layout for the app*/
+
+  @media (max-width: 600px) {
+
+    /*Index*/
+    #container{
+        flex-direction: column;
+    }
+    header{
+        flex-direction: column;
+    }
+    #recipeListBackGround{
+        max-width:320px;
+        margin-top: 0px;
+        padding:10px;
+    }
+    #recipeNav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+        max-width:  320px;
+    }
+    .recipeList{
+        flex-direction: column;
+        justify-content: left;
+    }
+    .brewNowBtn{
+        padding: 5px 5px;
+        width:100px;
+        font-size:14px;
+    }
+    
+    /*BrewNow*/
+
+    #brewInfo,
+    #preparation,
+    #timeDisplay,
+    #timerBtnNav {
+        max-width: 320px;
+    }
+    #recipeNav{
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap:25px;
+        width: 320px;
+    }
+    
+    #brewInfo{
+        gap:10px;
+    }
+    
+    #preparation{
+        width:300px;
+        padding:25px;
+    }
+        
+    #timeDisplay{
+        width:300px;
+        padding:25px;
+    }
+    
+    #timeBtnNav{
+        width:300px;
+        gap:10px;
+        flex-wrap: wrap;
+    }
+    
+    #startTimer,
+    #pauseTimer,
+    #brewAgain {
+        padding: 10px 20px;
+    }
+  }
